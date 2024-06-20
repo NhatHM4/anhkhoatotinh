@@ -11,12 +11,27 @@ body {
     min-height: 100vh;
     background: whitesmoke;
 }
-h2 {
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+}
+
+h2 {
     font-size: 3em;
     color: #e94d58;
     margin: 15px 0;
 }
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Khoảng cách giữa img và video */
+}
+
 .btn-group {
     width: 100%;
     height: 40px;
@@ -24,6 +39,7 @@ h2 {
     justify-content: center;
     margin-top: 50px;
 }
+
 button {
     position: absolute;
     width: 150px;
@@ -35,14 +51,30 @@ button {
     cursor: pointer;
     box-shadow: 0 2px 4px gray;
     border: 2px solid #e94d58;
-    font-size: 1.2em;
 }
+
 button:nth-child(1) {
     margin-left: -200px;
     background: #e94d58;
 }
+
 button:nth-child(2) {
     margin-right: -200px;
     background: white;
     color: #e94d58;
+}
+
+#noButton {
+    position: absolute;
+    z-index: 10; /* Đảm bảo nút luôn ở trên cùng */
+    padding: 10px 20px;
+    background-color: #747e8a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.gif, #myVideo {
+    max-width: 100%;
+    height: auto;
 }
